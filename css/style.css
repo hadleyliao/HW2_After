@@ -10144,3 +10144,10 @@ h6,
     border-right: none !important;
   }
 }
+
+/*使用 font-display: swap 避免文字跳動*/
+@font-face {
+  font-family: "MyCustomFont";
+  src: url("myfont.woff2") format("woff2");
+  font-display: swap;
+}
