@@ -22,6 +22,7 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
+
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -102,10 +103,18 @@
         <div id="header-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
+                    <!-- ⭐使用合適的圖片大小 -->
                     <picture>
-                        <source srcset="img/carousel-1.webp" type="image/webp">
-                        <img class="w-100" src="img/carousel-1.jpg" alt="Image" fetchpriority="high">
+                        <source srcset="img/carousel-1-600.webp 600w, img/carousel-1-1200.webp 1200w" type="image/webp">
+                        <img
+                                class="w-100"
+                                src="img/carousel-1-1200.jpg"
+                                srcset="img/carousel-1-600.jpg 600w, img/carousel-1-1200.jpg 1200w"
+                                sizes="(max-width: 600px) 600px, 1200px"
+                                alt="Image"
+                                fetchpriority="high">
                     </picture>
+
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h1 class="display-3 text-white mb-md-4">Traditional Ice Cream Since 1950</h1>
@@ -151,11 +160,10 @@
             <div class="row">
                 <div class="col-lg-4 py-5">
                     <section>
-                        <h3 class="font-weight-bold mb-3">About Us</h3>
-                        <h4 class="text-muted mb-3">Eos kasd eos dolor vero vero, lorem stet diam rebum. Ipsum amet sed vero dolor sea</h4>
+                        <h2 class="font-weight-bold mb-3">About Us</h2> <!-- 修改為 <h2> -->
+                        <h3 class="text-muted mb-3">Eos kasd eos dolor vero vero, lorem stet diam rebum. Ipsum amet sed vero dolor sea</h3> <!-- 修改為 <h3> -->
                         <p>Takimata sed vero vero no sit sed, justo clita duo no duo amet et, nonumy kasd sed dolor eos diam lorem eirmod. Amet sit amet amet no. Est nonumy sed labore eirmod sit magna. Erat at est justo sit ut. Labor diam sed ipsum et eirmod</p>
                         <a href="" class="btn btn-secondary mt-2" aria-label="Learn more about us">Learn More</a>
-
                     </section>
                 </div>
 
@@ -170,9 +178,9 @@
                 <div class="col-lg-4 py-5">
                     <h4 class="font-weight-bold mb-3">Our Features</h4>
                     <p>Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est dolor</p>
-                    <h5 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>Eos kasd eos dolor</h5>
-                    <h5 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>Eos kasd eos dolor</h5>
-                    <h5 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>Eos kasd eos dolor</h5>
+                    <h3 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>Eos kasd eos dolor</h3>
+                    <h3 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>Eos kasd eos dolor</h3>
+                    <h3 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>Eos kasd eos dolor</h3>
                     <a href="" class="btn btn-primary mt-2">Learn More</a>
                 </div>
             </div>
@@ -186,10 +194,25 @@
         <div class="row bg-primary m-0">
             <div class="col-md-6 px-0" style="min-height: 500px;">
                 <div class="position-relative h-100">
+                    <!-- ⭐使用合適的圖片大小 -->
                     <picture>
-                        <source srcset="img/promotion.webp" type="image/webp">
-                        <img class="position-absolute w-100 h-100" src="img/promotion.jpg" alt="Image" loading="lazy" style="object-fit: cover;">
+                        <!-- WebP 格式的圖片 -->
+                        <source srcset="img/about-600w.webp 600w, img/about-1200w.webp 1200w, img/about-1800w.webp 1800w" type="image/webp">
+
+                        <!-- JPEG 格式的圖片 -->
+                        <img
+                                class="position-absolute w-100 h-100"
+                                src="img/about-1200w.jpg"
+                                srcset="img/about-600w.jpg 600w, img/about-1200w.jpg 1200w, img/about-1800w.jpg 1800w"
+                                sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 1800px"
+                                width="600"
+                                height="400"
+                                alt="Image"
+                                loading="lazy"
+                                style="object-fit: cover;">
                     </picture>
+
+
                     <button type="button" class="btn-play" data-toggle="modal"
                             data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal"
                             aria-label="播放影片" title="播放影片">
@@ -250,7 +273,7 @@
                                 <img class="rounded-circle w-100 h-100 bg-light p-3" src="img/service-1.jpg" alt="Image" loading="lazy" style="object-fit: cover;">
                             </div>
                             <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
-                                <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">Quality Maintain</h5>
+                                <h2 class="font-weight-semi-bold mt-5 mb-3 pt-5">Quality Maintain</h2>
                                 <p>Dolor nonumy sed eos sed lorem diam amet eos magna. Dolor kasd lorem duo stet kasd justo</p>
                                 <a href="" class="border-bottom border-secondary text-decoration-none text-secondary">Learn More</a>
                             </div>
@@ -260,7 +283,7 @@
                                 <img class="rounded-circle w-100 h-100 bg-light p-3" src="img/service-2.jpg" alt="Image" loading="lazy" style="object-fit: cover;">
                             </div>
                             <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
-                                <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">Individual Approach</h5>
+                                <h2 class="font-weight-semi-bold mt-5 mb-3 pt-5">Individual Approach</h2>
                                 <p>Dolor nonumy sed eos sed lorem diam amet eos magna. Dolor kasd lorem duo stet kasd justo</p>
                                 <a href="" class="border-bottom border-secondary text-decoration-none text-secondary">Learn More</a>
                             </div>
@@ -270,7 +293,7 @@
                                 <img class="rounded-circle w-100 h-100 bg-light p-3" src="img/service-3.jpg" alt="Image" loading="lazy" style="object-fit: cover;">
                             </div>
                             <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
-                                <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">Celebration Ice Cream</h5>
+                                <h2 class="font-weight-semi-bold mt-5 mb-3 pt-5">Celebration Ice Cream</h2>
                                 <p>Dolor nonumy sed eos sed lorem diam amet eos magna. Dolor kasd lorem duo stet kasd justo</p>
                                 <a href="" class="border-bottom border-secondary text-decoration-none text-secondary">Learn More</a>
                             </div>
@@ -280,7 +303,7 @@
                                 <img class="rounded-circle w-100 h-100 bg-light p-3" src="img/service-4.jpg" alt="Image" loading="lazy" style="object-fit: cover;">
                             </div>
                             <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
-                                <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">Delivery To Any Point</h5>
+                                <h2 class="font-weight-semi-bold mt-5 mb-3 pt-5">Delivery To Any Point</h2>
                                 <p>Dolor nonumy sed eos sed lorem diam amet eos magna. Dolor kasd lorem duo stet kasd justo</p>
                                 <a href="" class="border-bottom border-secondary text-decoration-none text-secondary">Learn More</a>
                             </div>
@@ -377,52 +400,52 @@
                     <div class="owl-carousel product-carousel">
                         <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
                             <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">$99</h4>
+                                <h2 class="font-weight-bold text-white mb-0">$99</h2>
                             </div>
                             <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
                                 <img class="rounded-circle w-100 h-100" src="img/product-1.jpg" alt="Image" loading="lazy" style="object-fit: cover;">
                             </div>
-                            <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
+                            <h3 class="font-weight-bold mb-4">Vanilla Ice Cream</h3>
                             <a href="" class="btn btn-sm btn-secondary">Order Now</a>
                         </div>
                         <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
                             <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">$99</h4>
+                                <h2 class="font-weight-bold text-white mb-0">$99</h2>
                             </div>
                             <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
                                 <img class="rounded-circle w-100 h-100" src="img/product-2.jpg" alt="Image" loading="lazy" style="object-fit: cover;">
                             </div>
-                            <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
+                            <h3 class="font-weight-bold mb-4">Vanilla Ice Cream</h3>
                             <a href="" class="btn btn-sm btn-secondary">Order Now</a>
                         </div>
                         <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
                             <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">$99</h4>
+                                <h2 class="font-weight-bold text-white mb-0">$99</h2>
                             </div>
                             <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
                                 <img class="rounded-circle w-100 h-100" src="img/product-3.jpg" alt="Image" loading="lazy" style="object-fit: cover;">
                             </div>
-                            <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
+                            <h3 class="font-weight-bold mb-4">Vanilla Ice Cream</h3>
                             <a href="" class="btn btn-sm btn-secondary">Order Now</a>
                         </div>
                         <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
                             <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">$99</h4>
+                                <h2 class="font-weight-bold text-white mb-0">$99</h2>
                             </div>
                             <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
                                 <img class="rounded-circle w-100 h-100" src="img/product-4.jpg" alt="Image" loading="lazy" style="object-fit: cover;">
                             </div>
-                            <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
+                            <h3 class="font-weight-bold mb-4">Vanilla Ice Cream</h3>
                             <a href="" class="btn btn-sm btn-secondary">Order Now</a>
                         </div>
                         <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
                             <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">$99</h4>
+                                <h2 class="font-weight-bold text-white mb-0">$99</h2>
                             </div>
                             <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
                                 <img class="rounded-circle w-100 h-100" src="img/product-5.jpg" alt="Image" loading="lazy" style="object-fit: cover;">
                             </div>
-                            <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
+                            <h3 class="font-weight-bold mb-4">Vanilla Ice Cream</h3>
                             <a href="" class="btn btn-sm btn-secondary">Order Now</a>
                         </div>
                     </div>
@@ -450,8 +473,8 @@
                                 <img class="rounded-circle w-100 h-100" src="img/team-1.jpg" alt="Image" loading="lazy" style="object-fit: cover;">
                             </div>
                             <div class="position-relative text-center bg-light rounded px-4 py-5" style="margin-top: -100px;">
-                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">Full Name</h3>
-                                <h6 class="text-uppercase text-muted mb-4">Designation</h6>
+                                <h2 class="font-weight-bold mt-5 mb-3 pt-5">Full Name</h2>
+                                <h3 class="text-uppercase text-muted mb-4">Designation</h3>
                                 <div class="d-flex justify-content-center pt-1">
                                     <a class="btn btn-outline-secondary btn-social mr-2" href="#" aria-label="前往 Twitter"><i class="fab fa-twitter"></i></a>
                                     <a class="btn btn-outline-secondary btn-social mr-2" href="#" aria-label="前往 Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -464,8 +487,8 @@
                                 <img class="rounded-circle w-100 h-100" src="img/team-2.jpg" alt="Image" loading="lazy" style="object-fit: cover;">
                             </div>
                             <div class="position-relative text-center bg-light rounded px-4 py-5" style="margin-top: -100px;">
-                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">Full Name</h3>
-                                <h6 class="text-uppercase text-muted mb-4">Designation</h6>
+                                <h2 class="font-weight-bold mt-5 mb-3 pt-5">Full Name</h2>
+                                <h3 class="text-uppercase text-muted mb-4">Designation</h3>
                                 <div class="d-flex justify-content-center pt-1">
                                     <a class="btn btn-outline-secondary btn-social mr-2" href="#" aria-label="前往 Twitter"><i class="fab fa-twitter"></i></a>
                                     <a class="btn btn-outline-secondary btn-social mr-2" href="#" aria-label="前往 Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -478,8 +501,8 @@
                                 <img class="rounded-circle w-100 h-100" src="img/team-3.jpg" alt="Image" loading="lazy" style="object-fit: cover;">
                             </div>
                             <div class="position-relative text-center bg-light rounded px-4 py-5" style="margin-top: -100px;">
-                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">Full Name</h3>
-                                <h6 class="text-uppercase text-muted mb-4">Designation</h6>
+                                <h2 class="font-weight-bold mt-5 mb-3 pt-5">Full Name</h2>
+                                <h3 class="text-uppercase text-muted mb-4">Designation</h3>
                                 <div class="d-flex justify-content-center pt-1">
                                     <a class="btn btn-outline-secondary btn-social mr-2" href="#" aria-label="前往 Twitter"><i class="fab fa-twitter"></i></a>
                                     <a class="btn btn-outline-secondary btn-social mr-2" href="#" aria-label="前往 Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -492,8 +515,8 @@
                                 <img class="rounded-circle w-100 h-100" src="img/team-4.jpg" alt="Image" loading="lazy" style="object-fit: cover;">
                             </div>
                             <div class="position-relative text-center bg-light rounded px-4 py-5" style="margin-top: -100px;">
-                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">Full Name</h3>
-                                <h6 class="text-uppercase text-muted mb-4">Designation</h6>
+                                <h2 class="font-weight-bold mt-5 mb-3 pt-5">Full Name</h2>
+                                <h3 class="text-uppercase text-muted mb-4">Designation</h3>
                                 <div class="d-flex justify-content-center pt-1">
                                     <a class="btn btn-outline-secondary btn-social mr-2" href="#" aria-label="前往 Twitter"><i class="fab fa-twitter"></i></a>
                                     <a class="btn btn-outline-secondary btn-social mr-2" href="#" aria-label="前往 Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -520,27 +543,34 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="owl-carousel testimonial-carousel">
+                        <!-- 標題元素未依遞減順序顯示 -->
                         <div class="text-center">
                             <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</h4>
+                            <!-- 將 <h4> 改為 <p>，避免干擾標題層級結構 -->
+                            <p class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
                             <img class="img-fluid mx-auto mb-3" src="img/testimonial-1.jpg" alt="Image" loading="lazy">
-                            <h5 class="font-weight-bold m-0">Client Name</h5>
+                            <h2 class="font-weight-bold m-0">Client Name</h2>
                             <span>Profession</span>
                         </div>
+
                         <div class="text-center">
                             <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</h4>
+                            <!-- 將 <h4> 改為 <p>，保持標題結構清晰 -->
+                            <p class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
                             <img class="img-fluid mx-auto mb-3" src="img/testimonial-2.jpg" alt="Image" loading="lazy">
-                            <h5 class="font-weight-bold m-0">Client Name</h5>
+                            <h2 class="font-weight-bold m-0">Client Name</h2>
                             <span>Profession</span>
                         </div>
+
                         <div class="text-center">
                             <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</h4>
+                            <!-- 將 <h4> 改為 <p>，避免不必要的標題層級問題 -->
+                            <p class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
                             <img class="img-fluid mx-auto mb-3" src="img/testimonial-3.jpg" alt="Image" loading="lazy">
-                            <h5 class="font-weight-bold m-0">Client Name</h5>
+                            <h2 class="font-weight-bold m-0">Client Name</h2>
                             <span>Profession</span>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -567,12 +597,12 @@
                 <div class="col-12 mt-2 mb-4">
                     <div class="row">
                         <div class="col-sm-6 text-center text-sm-right border-right mb-3 mb-sm-0">
-                            <h5 class="font-weight-bold mb-2">Get In Touch</h5>
+                            <h2 class="font-weight-bold mb-2">Get In Touch</h2>
                             <p class="mb-2">123 Street, New York, USA</p>
                             <p class="mb-0">+012 345 67890</p>
                         </div>
                         <div class="col-sm-6 text-center text-sm-left">
-                            <h5 class="font-weight-bold mb-2">Opening Hours</h5>
+                            <h3 class="font-weight-bold mb-2">Opening Hours</h3>
                             <p class="mb-2">Mon – Sat, 8AM – 5PM</p>
                             <p class="mb-0">Sunday: Closed</p>
                         </div>
